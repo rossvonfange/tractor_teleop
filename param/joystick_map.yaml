@@ -1,0 +1,16 @@
+# Joystic parameters for live mapping joystic axis
+#
+#
+#
+
+# Parameters  
+drive_axis: 0 
+drive_forward_max: 2
+drive_reverse_max: 1
+turn_axis: 1
+deadman: 4
+estop: 1
+move_cancel: 2
+j_maps: [1,2,3,4,5,6,7,8]
+
+

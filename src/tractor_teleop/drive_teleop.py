@@ -15,7 +15,12 @@ class DriveTeleop:
         self.cmd_vel_pub = rospy.Publisher("teleop/cmd_vel", Twist, queue_size=1)
         self.goal_cancel_pub = rospy.Publisher("move_base/cancel", GoalID, queue_size=1)
         self.joy_sub = rospy.Subscriber("joy", Joy, self.on_joy, queue_size=1)
-
+        
+        if rospy.has_param('j_maps'):
+            jmaps = rospy.get_params("j_maps")
+            p, i, d = jmaps['p'], jmaps['i'], jmaps['d']
+        else: 
+            # load default 
 
     def on_joy(self, data):
 
